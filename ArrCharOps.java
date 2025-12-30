@@ -31,7 +31,7 @@ public class ArrCharOps {
     }
 
     public static void println(char[] arr) {
-        if (arr == null) return; [cite: 5, 6]
+        if (arr == null) return;
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i]);
         }
@@ -39,7 +39,7 @@ public class ArrCharOps {
     }
 
     public static char charAt(char[] arr, int index) {
-        return arr[index]; [cite: 27]
+        return arr[index];
     }
 
     public static boolean equals(char[] arr1, char[] arr2) {
@@ -53,7 +53,7 @@ public class ArrCharOps {
     }
 
     public static int indexOf(char[] arr, char ch) {
-        if (arr == null || arr.length == 0) return -1; [cite: 5, 6]
+        if (arr == null) return -1;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == ch) return i;
         }
@@ -61,7 +61,7 @@ public class ArrCharOps {
     }
 
     public static int indexOf(char[] arr, char ch, int fromIndex) {
-        if (arr == null || fromIndex >= arr.length) return -1;
+        if (arr == null) return -1;
         for (int i = fromIndex; i < arr.length; i++) {
             if (arr[i] == ch) return i;
         }
@@ -69,8 +69,8 @@ public class ArrCharOps {
     }
 
     public static int lastIndexOf(char[] arr, char ch) {
-        if (arr == null || arr.length == 0) return -1;
-        for (int i = arr.length - 1; i >= 0; i--) { [cite: 28]
+        if (arr == null) return -1;
+        for (int i = arr.length - 1; i >= 0; i--) {
             if (arr[i] == ch) return i;
         }
         return -1;
@@ -79,7 +79,7 @@ public class ArrCharOps {
     public static char[] concat(char[] arr1, char[] arr2) {
         int len1 = (arr1 == null) ? 0 : arr1.length;
         int len2 = (arr2 == null) ? 0 : arr2.length;
-        char[] result = new char[len1 + len2]; [cite: 30]
+        char[] result = new char[len1 + len2];
         for (int i = 0; i < len1; i++) {
             result[i] = arr1[i];
         }
@@ -110,7 +110,7 @@ public class ArrCharOps {
     }
 
     public static int compareTo(String str1, String str2) {
-        int len1 = str1.length(); [cite: 31]
+        int len1 = str1.length();
         int len2 = str2.length();
         int minLen = Math.min(len1, len2);
         for (int i = 0; i < minLen; i++) {
@@ -119,6 +119,6 @@ public class ArrCharOps {
         }
         if (len1 < len2) return -1;
         if (len1 > len2) return 1;
-        return 0; [cite: 34]
+        return 0;
     }
 }
